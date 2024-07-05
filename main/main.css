@@ -1,0 +1,62 @@
+@import "../variables.css";
+
+* {
+        font-family: Lato, sans-serif;
+}
+
+body {
+        background-color: var(--white);
+        margin: 0;
+        padding: 0;
+        color: var(--black);
+}
+
+header {
+        background-color: var(--oxford-blue);
+        color: var(--champagne-gold);
+        padding: 10px;
+        font-size: 20pt;
+}
+
+body p {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 50px;
+}
+
+h1 {
+        font-weight: 600;
+        text-align: center;
+}
+
+.container {
+        display: flex;
+        justify-content: center;
+}
+
+.container p {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 50px;
+        font-size: 20pt;
+
+}
+
+.container img {
+        width: 300px;
+        height: auto;
+        margin-bottom: 10px;
+
+}
+
+a {
+        text-decoration: none;
+}
+
+footer {
+        background-color: var(--seashell);
+        color: var(--oxford-blue);
+        text-align: right;
+        padding: 10px 20px;
+}
