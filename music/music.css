@@ -1,0 +1,127 @@
+@import "../variables.css";
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Lato, sans-serif;
+}
+
+html,
+body {
+        height: 100%;
+}
+
+body {
+        display: flex;
+        flex-direction: column;
+}
+
+header,
+main,
+footer {
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+}
+
+header {
+        background-color: var(--oxford-blue);
+}
+
+h1 {
+        font-family: "vivaldi-mn", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: var(--champagne-gold);
+}
+
+main {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--white);
+      gap: 50px;
+}
+
+footer {
+        background-color: var(--oxford-blue);
+        color: white;
+        margin: 0;
+        padding: 5px;
+        font-size: x-small;
+}
+
+h1 {
+        margin: 0;
+        font-size: 4em;
+}
+
+p {
+        margin: 0;
+        font-size: 1.2em;
+}
+
+.container,
+img,
+a {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        margin: 5%;
+        font-size: x-large;
+        text-decoration: none;
+        color: var(--white);
+}
+
+.background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1; /* Stellt sicher, dass das Video hinter dem Inhalt bleibt */
+        background-color: var(--oxford-blue);
+    }
+    
+
+
+.audio-container {
+        margin-top: 20px;
+        width: 100%; /* Stellt sicher, dass der Container die volle Breite einnimmt */
+        max-width: 900px; /* Begrenzung der maximalen Breite */
+       
+    }
+
+    .audio-container  p {
+        color: white;
+        text-align: left;
+        margin: 20px;
+        font-size: 0.8em;
+    }
+    
+    audio {
+        width: 100%;
+        border: none; /* Entfernt den Rahmen */
+        border-radius: 0; /* Entfernt abgerundete Ecken */
+        margin: 30px;
+    }
+
+    h3 {
+        color: white;
+        text-align:  left;
+        margin: 20px;
+        text-align: center;
+    }
+
+
+    .spotify {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
