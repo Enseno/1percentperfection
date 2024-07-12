@@ -96,3 +96,19 @@ main p {
         width: 50%;
         text-align: left;
 }
+
+.quotebook {
+        margin: 20px;
+}
+
+.fitness {
+        margin: 20px;
+}
+
+.music {
+        margin: 20px;
+}
+
+.valuetok {
+        margin: 20px;
+}
