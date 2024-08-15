@@ -1,23 +1,9 @@
 @import "../variables.css";
 
 * {
+        box-sizing: border-box;
         font-family: Lato, sans-serif;
-}
-
-header {
-        background-color: var(--oxford-blue);
-        color: var(--champagne-gold);
-        padding: 10px;
-        font-size: 20pt;
-}
-
-body {
-        margin: 0;
-        padding: 0;
-        color: var(--black);
-        font-size: 10pt;
-
-
+        text-decoration: none;
 }
 
 .background {
@@ -26,59 +12,207 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url(../res/quotebook.png); /* Stellen Sie sicher, dass der Pfad zum Bild korrekt ist */
-        background-size: cover;
-        background-position: center;
+        overflow: hidden;
         z-index: -1;
-        filter: blur(5px);
-    }
+        background-color: var(--oxford-blue);
+}
 
-    html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
+.font-vivaldi {
+        font-family: "vivaldi-mn", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+}
+
+header {
+        width: 100%;
+        text-align: center;
+        font-size: 1.5vw;
+        color: var(--floral-white);
+}
+
+body {
+        margin: 0px;
+        font-size: 16px;
+}
 
 main {
-        padding: 20px;
-        margin: 150px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0px 0px 40px 0px;
+}
+
+.introduction {
+        width: 50%;
+        padding: 0px 0px 40px 0px;
+}
+
+.introduction p {
+        margin: 15px 0px 15px 0px;
+        text-align: justify;
+        line-height: 1.6;
+
+}
+
+.quotes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: 100%;
 }
 
 .quote {
-        /*background-color: var(--white-transparency);*/
-        background-color: var(--white);
-        margin: 30px 0;
-        padding: 15px;
-        border-left: 5px solid var(--champagne-gold);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: var(--floral-white);
+        color: var(--oxford-blue);
+        width: 50%;
+        margin: 0px;
+        padding: 0px;
 }
 
 .quote p {
-        margin: 0;
-        font-size: 1.2em;
+        line-height: 1.6;
+        padding: 10px 10px 10px 20px;
+        margin: 0px;
+}
+
+ul {
+        margin: 0px;
+        list-style-type: "∙";
 }
 
 .author {
         text-align: right;
         font-style: italic;
-        color: var(--black);
+        color: var(--oxford-blue);
+        font-size: x-small;
+        padding: 0px 5px 5px 0px;
+        margin: 0;
 }
 
-.custom-bulletpoints {
-        list-style: none;
-        padding-left: 70px;
+.mindset {
+        border-left: 9px solid var(--emerald);
 }
 
-.custom-bulletpoints li:before {
-        content: "\00B7";
-        display: inline-block;
-        width: 1.2em;
-        margin-left: -1em;
+.love {
+        border-left: 9px solid var(--amethyst);
+}
+
+.wisdom {
+        border-left: 9px solid var(--aqua);
+}
+
+.affirmation {
+        border-left: 9px solid var(--heliotrop);
+}
+
+.ponder {
+        border-left: 9px solid var(--black);
+}
+
+.filter-buttons {
+        display: flex;
+        gap: 30px;
+        padding-bottom: 50px;
+}
+
+button {
+        cursor: pointer;
+        color: white;
+        width: 90px;
+        background: none;
+        border: none;
+}
+
+button:nth-child(1) {
+        border-bottom: 3px solid var(--white);
+}
+
+button:nth-child(2) {
+        border-bottom: 3px solid var(--emerald);
+}
+
+button:nth-child(3) {
+        border-bottom: 3px solid var(--amethyst);
+}
+
+button:nth-child(4) {
+        border-bottom: 3px solid var(--aqua);
+}
+
+button:nth-child(5) {
+        border-bottom: 3px solid var(--heliotrop);
+}
+
+button:nth-child(6) {
+        border-bottom: 3px solid var(--black);
+}
+
+.nav {
+        background-color: var(--floral-white);
+        display: flex;
+        justify-content: center;
+        margin: 0vh 0vh 1.5vh 0vh;
+}
+
+.nav a {
+        color: var(--oxford-blue);
+        padding: 2vh 1.5vw 2vh 1.5vw;
+        font-size: 16px;
+}
+
+.nav a:hover, .nav a.active {
+        background-color: var(--champagne-gold);
 }
 
 footer {
-        background-color: var(--seashell);
-        color: var(--oxford-blue);
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        color: white;
+        font-size: x-small;
         text-align: right;
-        padding: 10px 20px;
+        padding: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+        header {
+                font-size: 14px;
+        }
+
+        .nav a {
+                font-size: 14px;
+        }
+
+        main {
+                font-size: 12px;
+                flex-direction: column;
+        }
+
+        .introduction {
+                width: 100%;
+                padding: 0vh 4vw 0vh 4vw;
+        }
+
+        .quotes {
+                padding: 0vh 4vw 0vh 4vw;
+        }
+
+        .quote {
+                width: 100%;
+        }
+
+        .filter-buttons {
+                display: flex;
+                justify-content: center;
+                width: 50vw;
+                gap: 10px;
+                padding: 20px 4vw 3ch 4vw;
+        }
+        
+        button {
+                font-size: 10px;
+        }
 }

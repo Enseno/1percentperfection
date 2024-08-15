@@ -6,105 +6,271 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
                 rel="stylesheet">
+        <link rel="stylesheet" href="https://use.typekit.net/tmi7dck.css">
         <link rel="stylesheet" href="quotebook.css">
         <title>Quotebook</title>
+        <script>
+                // Warte, bis der DOM vollständig geladen ist
+                document.addEventListener("DOMContentLoaded", function () {
+                        // Finde alle Buttons
+                        const buttons = document.querySelectorAll(".filter-buttons button");
+
+                        // Iteriere über alle Buttons und füge den Event Listener hinzu
+                        buttons.forEach(button => {
+                                button.addEventListener("click", function () {
+                                        // Finde alle Quotes
+                                        const allQuotes = document.querySelectorAll(".quote");
+
+                                        // Hol den Text des Buttons
+                                        const filterClass = button.textContent.toLowerCase();
+
+                                        if (filterClass === "all") {
+                                                // Zeige alle Zitate, wenn "All" geklickt wurde
+                                                allQuotes.forEach(quote => quote.style.display = "block");
+                                        } else {
+                                                // Verberge alle Zitate
+                                                allQuotes.forEach(quote => quote.style.display = "none");
+
+                                                // Finde alle Zitate mit der passenden Klasse und zeige sie an
+                                                const filteredQuotes = document.querySelectorAll(`.${filterClass}.quote`);
+                                                filteredQuotes.forEach(quote => quote.style.display = "block");
+                                        }
+                                });
+                        });
+                });
+        </script>
+
 </head>
 
 <body>
         <div class="background"></div>
+
         <header>
-                <h1>Quotebook</h1>
+                <h1 class="font-vivaldi">Quotebook</h1>
         </header>
 
+        <div class="nav">
+                <a href="../index.html">Home</a>
+                <a href="../quotebook/quotebook.html" class="active">Quotebook</a>
+                <a href="../fitness/fitness.html">Fitness Realm</a>
+                <a href="../music/music.html">Music </a>
+        </div>
+
         <main>
-                
+                <div class="introduction">
+                        <h3>Liebe Leserinnen und Leser,</h3>
 
+                        <p>Schon seit geraumer Zeit habe ich mich dem amüsanten und durchaus vergnüglichen Unterfangen
+                                gewidmet, allerlei Zitate aus den edelsten Quellen unserer Zeit zu sammeln. Ob aus literarischen
+                                Meisterwerken, klugen Abhandlungen, fesselnden Videos, charmanten Gesprächen oder
+                                modernen Plattformen, wie TikTok, sind diese kleinen Weisheiten ein wahrer Schatz.</p>
 
-                <div class="quote">
-                        <p>The best version of myself would:
-                        <ul class="custom-bulletpoints">
-                                <li>Waking up at 5am</li>
-                                <li>Writing down my my thoughts before bed</li>
-                                <li>Learning an online skill 30 mins a day zB. Coding, YouTube, Copywriting, Digital
-                                        Marketing, Content Creation</li>
-                                <li>Spending 1 hour a day excercising</li>
-                                <li>Sitting in silence 10 Minutes a day</li>
-                                <li>Creating a proper sleep schedule</li>
-                                <li>Taking a 30 min walk in nature</li>
-                                <li>Readin 20 Pages a day</li>
-                                <li>Drinking Water with every meal</li>
-                        </ul>
+                        <p>Auf subjektive Weise habe ich sie in fünf erlesene Kategorien sortiert – sei es zur Erhellung
+                                der Weisheit, zur Offenbarung tiefer Erkenntnisse, zur Anregung des Geistes oder zu anderen
+                                vergnüglichen Zwecken. Wie amüsant es sein kann, sich in diese kostbaren Gedanken zu vertiefen!
+                                Sie sind gefüllt mit Wissen, Wahrheit und den unvergänglichen Gesetzen unseres Seins.</p>
+
+                        <p>Freilich, liebe Leser, werden einige von Ihnen beim Lesen der Zeilen vielleicht denken: „Was
+                                für Unfug!“ – andere werden hingegen mit einem erleuchteten Ausruf der Erkenntnis entgegnen:
+                                „So ist es wahrlich!“. Manch eine Äußerung mag gar etwas gewagt erscheinen, doch möge jeder
+                                für sich selbst entscheiden, ob diese Wahrheiten dem eigenen Verständnis entsprechen oder nicht.</p>
+
+                        <p>Gönnen Sie sich den Genuss, und lassen Sie sich von der Lektüre inspirieren.</p>
+
+                        <p>Mit vorzüglicher Hochachtung<br>
+                                <span class="font-vivaldi">Ihre Eule aus der Nachbarschaft</span></p>
+
+                        <p>Neue Zitate erscheinen kontinuierlich immer oben. Wenn du einen gute Quote kennst,
+                                die sich nicht in der Sammlung befindet schreib sie mir gerne.</p>
+
+                        <p>Es wird einige Zeit dauern alle Texte hierher zu übertragen. Solltest du diese Zeile hier lesen,
+                                so werden noch viele weitere in nächster Zeit folgen.
                         </p>
                 </div>
 
-                <div class="quote">
-                        <p>Our life is what our thoughts make it.</p>
-                        <div class="author">— Marcus Aurelius</div>
+                <div class="filter-buttons">
+                        <button>All</button>
+                        <button>Mindset</button>
+                        <button>Love</button>
+                        <button>Wisdom</button>
+                        <button>Affirmation</button>
+                        <button>Ponder</button>
                 </div>
 
-                <div class="quote">
-                        <p>"A Fool is known by his speech; and a wise man by silence."</p>
-                        <div class="author">— Pythagoras</div>
+                <div class="quotes">
+
+                        <div class="love quote">
+                                <p> Wenn man versucht nichts an sein Herz ranzulassen kann man viel Schmerz vermeiden, 
+                                        aber das Risiko dabei ist sein Leben nur halb zu leben.</p>
+                        </div>
+
+                        <div class="ponder quote">
+                                <p> How can you become the person you wish to be, unless you live the live that you wish not to live? 
+                                        How can you be brave unless you felt fear? How can you be strong, unless you were once weak?</p>
+                        </div>
+
+                        <div class="wisdom quote">
+                                <p> Größe und Wert erlangt man nicht immer nur durch das erfolgreiche erledigen schwieriger Aufgaben,
+                                         sondern auch durch den Verzicht vieler möglicher Alternativen. Dieser erfordert aber eine Menge Disziplin. </p>
+                        </div>
+
+                        <div class="love quote">
+                                <p>Was ist Liebe?<br>
+                                        Liebe ist kein Gefühl, Liebe ist die Handlung. <br>
+                                        Liebe ist nicht jemandem zu sagen, dass man Ihn liebt.<br> 
+                                        Liebe ist nicht das Verlangen nach Sex.<br>
+                                        Liebe ist es Abends nach Hause zu kommen und sich zu freuen, dass der Partner einfach da ist.<br>
+                                        Liebe ist es sich gegenseitig mit Kleinigkeiten ohne erwünschte Gegenleistung zu beschenken.<br>
+                                        Liebe ist es den Partner zu unterstützen, egal was er tut, an Ihn zu glauben unabhängig wie schwer die Zeiten sein mögen.<br>
+                                        Liebe steht über Dingen wie Streit, Stress oder Unstimmigkeiten.<br>
+                                        Freundschaften und Beziehungen können enden.<br>
+                                        Aber wahre Liebe stirbt nicht.<br>
+                                        Wenn sie bedingungslos ist wird sie immer da sein.<br>
+                                        Wenn du sagst Liebe ginge irgendwann vorbei, dann hast du noch nie echte Liebe verspürt.<br>
+                                        Liebe ist an jemanden zu denken und ein warmes Stechen in der Brust zu verspüren.<br>
+                                        Deine Familie, dein Vater, Mutter, Geschwister, Sohn , Tochter,<br>
+                                        egal was die Umstände sein mögen, du wirst sie trotzdem immer lieben.<br>
+                                        Weil diese Liebe bedingungslos ist, sie ist nicht an äußere Bedingungen gebunden.<br>
+                                        Genau diese Liebe in einem Partner zu finden, ist der größte Schatz der Welt.<br>
+                                        Egal welche Eigenschaften du hast, wie du aussiehst, was du kannst oder nicht kannst,<br>
+                                        die richtige Person wird dich lieben, bedingungslos und echt.</p>
+                        </div>
+
+                        <div class="love quote">
+                                <p>Someone being patient is one of the sofest ways of love.</p>
+                        </div>
+
+                        <div class="wisdom quote">
+                                <p>Es ist immer am schwersten die Wahrheit über sich selbst zu akzeptieren.</p>
+                        </div>
+
+                        <div class="affirmation quote">
+                                <p>The best version of myself would:
+                                        <ul>
+                                                <li>Waking up at 5am</li>
+                                                <li>Writing down my my thoughts before bed</li>
+                                                <li>Learning an online skill 30 mins a day zB. Coding, YouTube, Copywriting, Digital Marketing, Content Creation</li>
+                                                <li>Spending 1 hour a day excercising</li>
+                                                <li>Sitting in silence 10 Minutes a day</li>
+                                                <li>Creating a proper sleep schedule</li>
+                                                <li>Taking a 30 min walk in nature</li>
+                                                <li>Readin 20 Pages a day</li>
+                                                <li>Drinking Water with every meal</li>
+                                        </ul>
+                                </p>
+                        </div>
+
+                        <div class="wisdom quote">
+                                <p>Our life is what our thoughts make it.</p>
+                                <div class="author">— Marcus Aurelius</div>
+                        </div>
+
+                        <div class="wisdom quote">
+                                <p>"A Fool is known by his speech; and a wise man by silence."</p>
+                                <div class="author">— Pythagoras</div>
+                        </div>
+
+                        <div class="wisdom quote">
+                                <p>"We suffer more in imagination than in reality."</p>
+                                <div class="author">— Seneca</div>
+                        </div>
+
+                        <div class="wisdom quote">
+                                <p>"If you are the smartest person in the room, then you are in the wrong room."</p>
+                                <div class="author">— Confucius</div>
+                        </div>
+
+                        <div class="affirmation quote">
+                                <p>Train while they rest. <br>
+                                        Save while they spend. <br>
+                                        Work while they sleep. <br>
+                                        Pray while they party. <br>
+                                        Celebrate while they regret. <br>
+                                        Flex while they hide.</p>
+                        </div>
+
+                        <div class="love quote">
+                                <p>"Your competition is never other men. Your competition is her values."</p>
+                                <div class="author">— Sadia Psychology</div>
+                        </div>
+
+                        <div class="wisdom quote">
+                                <p>Das was du an anderen Menschen hasst, hasst du bei dir selbst.
+                                        <br>Und das was du an anderen liebst, liebst du bei dir selbst.
+                                </p>
+                        </div>
+
+                        <div class="wisdom quote">
+                                <p>Vision is the art of seeing what is invisible to other.</p>
+                        </div>
+
+                        <div class="ponder quote">
+                                <p>Du kommst in einen Raum mit allen Menschen, die du in deinem Leben kennengelernt
+                                        hast. <br>
+                                        Welche Person versuchst du direkt zu finden?</p>
+                        </div>
+
+                        <div class="affirmation quote">
+                                <p>"People treat me like a god!" i said. <br>
+                                        "How?" answerd a less experienced friend. <br>
+                                        "They ignore my existence fully till they need somthing from me." <br>
+                                        Everybody became silent.</p>
+                        </div>
+
+                        <div class="mindset quote">
+                                <p>The only person you should compare yourself with is the person you were yesterday.
+                                </p>
+                        </div>
+
+                        <div class="mindset quote">
+                                <p>If you can't write 2 pages, write 1.
+                                        <br>If you can't workout 60 minutes, workout 20.
+                                        <br>If you can't meditate 15 minutes, meditate 5.
+                                        <br>Reinforce the habit of showing up.
+                                </p>
+                        </div>
+
+                        <div class="wisdom quote">
+                                <p>Den größten Fehler den man im Leben machen kann, ist, immer Angst zu haben, einen
+                                        Fehler zu
+                                        begehen. <br>Doch habe keine Angst, denn vergesse niemals: Es gibt keinen
+                                        besseren
+                                        Lehrer als den
+                                        Fehler. <br>Freue dich also über alles was du im Nachgang als einen Fehler
+                                        ansiehst,
+                                        denn dadurch
+                                        bist du nun schlauer als davor.</p>
+                        </div>
+
+                        <div class="love quote">
+                                <p>Liebe ist wie eine Welle.
+                                        <br>Damit eine Beziehung lange hält, müssen beide Partner einstecken und
+                                        einander
+                                        verzeihen können.
+                                        <br>Es ist unmöglich, das die Gefühle immer die gleichen sein werden, denn sie
+                                        werden
+                                        mit der Zeit automatisch weniger werden. Du musst den Fakt, dass dein Partner
+                                        nicht
+                                        perfekt ist, dich enttäuscht und vielleicht verletzt akzeptieren.
+                                        <br> Ihr müsst beide die Höhen und Tiefen zusammen durchstehen, das wird euch
+                                        ausmachen.
+                                        <br>Kämpfst du wird es letztlich umso schöner.
+                                </p>
+                        </div>
                 </div>
 
-                <div class="quote">
-                        <p>"We suffer more in imagination than in reality."</p>
-                        <div class="author">— Seneca</div>
-                </div>
 
-                <div class="quote">
-                        <p>"If you are the smartest person in the room, then you are in the wrong room."</p>
-                        <div class="author">— Confucius</div>
-                </div>
 
-                <div class="quote">
-                        <p>Train while they rest. <br>
-                                Save while they spend. <br>
-                                Work while they sleep. <br>
-                                Pray while they party. <br>
-                                Celebrate while they regret. <br>
-                                Flex while they hide.</p>
-                </div>
-
-                <div class="quote">
-                        <p>"Your competition is never other men. Your competition is her values."</p>
-                        <div class="author">— Sadia Psychology</div>
-                </div>
-
-                <div class="quote">
-                        <p>Das was du an anderen Menschen hasst, hasst du bei dir selbst. Und das was du an anderen
-                                liebst, liebst du bei dir selbst.</p>
-                </div>
-
-                <div class="quote">
-                        <p>Vision is the art of seeing what is invisible to other.</p>
-                </div>
-
-                <div class="quote">
-                        <p>Du kommst in einen Raum mit allen Menschen, die du in deinem Leben kennengelernt hast. <br>
-                                Welche Person versuchst du direkt zu finden?</p>
-                </div>
-
-                <div class="quote">
-                        <p>"People treat me like a god!" i said. <br>
-                                "How?" answerd a less experienced friends. <br>
-                                "They ignore my existence fully till they need somthing from me." <br>
-                                Everybody became silent.</p>
-                </div>
-
-                <div class="quote">
-                        <p>The only person you should compare yourself with is the person you were yesterday.</p>
-                </div>
 
 
 
 
 
         </main>
-        <footer>
-                &copy Noah Engelschall 2024
-        </footer>
 
+        <footer>
+                &copy; 2024 Noah Engelschall
+        </footer>
 
 </body>
 

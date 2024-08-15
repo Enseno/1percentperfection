@@ -1,0 +1,123 @@
+@import "../variables.css";
+
+* {
+        box-sizing: border-box;
+        font-family: Lato, sans-serif;
+        text-decoration: none;
+}
+
+.background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+        background-color: var(--oxford-blue);
+}
+
+.font-vivaldi {
+        font-family: "vivaldi-mn", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+}
+
+header {
+        width: 100%;
+        text-align: center;
+        font-size: 1.5vw;
+        color: var(--floral-white);
+}
+
+body {
+        margin: 0px;
+        font-size: 16px;
+}
+
+.nav {
+        background-color: var(--floral-white);
+        display: flex;
+        justify-content: center;
+        margin: 0vh 0vh 1.5vh 0vh;
+}
+
+.nav a {
+        color: var(--oxford-blue);
+        padding: 2vh 1.5vw 2vh 1.5vw;
+        font-size: 16px;
+}
+
+.nav a:hover, .nav a.active {
+        background-color: var(--champagne-gold);
+}
+
+main {
+        display: flex;
+        color: white;
+        flex-direction: column;
+        align-items: center;
+}
+
+.audio-container {
+        width: 50%;
+        text-align: center;
+}
+
+p {
+        margin: 15px 0px 15px 0px;
+        text-align: justify;
+        line-height: 1.6;
+}
+
+audio {
+        width: 25%;
+        margin: 20px 0px 60px 0px;
+}
+
+.spotify {
+        display: flex;
+        width: 75%;
+        flex-wrap: wrap;
+        justify-content: center;
+}
+
+.spotify-embed {
+        padding: 20px;
+}
+
+footer {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        color: var(--floral-white);
+        font-size: x-small;
+        text-align: right;
+        padding: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+
+        header {
+                font-size: 14px;
+        }
+
+        .nav a {
+                font-size: 14px;
+        }
+
+        main {
+                font-size: 12px;
+                flex-direction: column;
+        }
+
+        .audio-container {
+                width: 100%;
+                padding: 0vh 4vw 0vh 4vw;
+        }
+
+        audio {
+                width: 75%;
+        }
+}
+
