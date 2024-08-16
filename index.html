@@ -133,7 +133,8 @@
                                                 .then(data => {
                                                         contentDiv.innerHTML = data;
 
-                                                        initializeSlideshow();
+                                                        initializeSlideshow('slideshow-2022');
+                                                        initializeSlideshow('slideshow-2023');
                                                 })
                                                 .catch(error => {
                                                         contentDiv.innerHTML = '<p>Der Inhalt konnte nicht geladen werden.</p>';
@@ -143,8 +144,8 @@
                         });
                 });
 
-                function initializeSlideshow() {
-                        var slideshow = document.getElementById('slideshow');
+                function initializeSlideshow(slideshowId) {
+                        var slideshow = document.getElementById(slideshowId);
                         if (!slideshow) return;
 
                         var slides = slideshow.children;
@@ -163,19 +164,22 @@
                                         slides[idx].play();
                                 }
                         }
+
                         function nextSlide() {
                                 showSlide((idx + 1) % slides.length);
                         }
+
                         function prevSlide() {
                                 showSlide((idx - 1 + slides.length) % slides.length);
                         }
-                        document.querySelector('button[onclick="nextSlide()"]').onclick = nextSlide;
-                        document.querySelector('button[onclick="prevSlide()"]').onclick = prevSlide;
+
+                        // Buttons mit spezifischem Slideshow-Id verknüpfen
+                        document.querySelector('#' + slideshowId + ' .next-slide').onclick = nextSlide;
+                        document.querySelector('#' + slideshowId + ' .prev-slide').onclick = prevSlide;
+
+                        // Zeige das erste Bild/Video an
                         showSlide(0);
                 }
-
-                // Test commit
-
         </script>
 
 </body>
