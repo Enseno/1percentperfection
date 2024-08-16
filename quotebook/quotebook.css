@@ -123,30 +123,32 @@ button {
         width: 90px;
         background: none;
         border: none;
+        padding: 5px 5px 5px 5px;
+        text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.5);
 }
 
 button:nth-child(1) {
-        border-bottom: 3px solid var(--white);
+        background: white;
 }
 
 button:nth-child(2) {
-        border-bottom: 3px solid var(--emerald);
+        background-color: var(--emerald);
 }
 
 button:nth-child(3) {
-        border-bottom: 3px solid var(--amethyst);
+        background: var(--amethyst);
 }
 
 button:nth-child(4) {
-        border-bottom: 3px solid var(--aqua);
+        background: var(--aqua);
 }
 
 button:nth-child(5) {
-        border-bottom: 3px solid var(--heliotrop);
+        background: var(--heliotrop);
 }
 
 button:nth-child(6) {
-        border-bottom: 3px solid var(--black);
+        background: var(--black) ;
 }
 
 .nav {
@@ -207,8 +209,8 @@ footer {
         .filter-buttons {
                 display: flex;
                 justify-content: center;
-                width: 50vw;
-                gap: 10px;
+                width: 100vw;
+                gap: 5px;
                 padding: 20px 4vw 3ch 4vw;
         }
         
