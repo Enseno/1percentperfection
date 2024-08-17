@@ -161,16 +161,16 @@ footer {
 @media only screen and (max-width: 1000px) {
 
         header {
-                font-size: 14px;
+                font-size: 11pt;
         }
 
         .nav a {
-                font-size: 14px;
+                font-size: 11pt;
                 padding: 2vh 2.5vw 2vh 2.5vw;
         }
 
         main {
-                font-size: 12px;
+                font-size: 11pt;
                 flex-direction: column;
         }
 

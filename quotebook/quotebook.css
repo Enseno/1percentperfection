@@ -181,15 +181,15 @@ footer {
 @media only screen and (max-width: 1000px) {
 
         header {
-                font-size: 14px;
+                font-size: 11pt;
         }
 
         .nav a {
-                font-size: 14px;
+                font-size: 11pt;
         }
 
         main {
-                font-size: 12px;
+                font-size: 11pt;
                 flex-direction: column;
         }
 
