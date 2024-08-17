@@ -16,10 +16,17 @@
         background-color: var(--oxford-blue);
 }
 
-.font-vivaldi {
+.font-vivaldi-header {
         font-family: "vivaldi-mn", sans-serif;
         font-weight: 400;
         font-style: normal;
+}
+
+.font-vivaldi-signature {
+        font-family: "vivaldi-mn", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 120%;
 }
 
 header {
@@ -31,7 +38,7 @@ header {
 
 body {
         margin: 0;
-        font-size: 16px;
+        font-size: 14pt;
 }
 
 .nav {
@@ -58,16 +65,20 @@ main {
         color: white;
 }
 
-.artikel {
-        width: 25%;
-        display: flex;
-        justify-content: center;
-}
-
+.artikel,
 .socials {
         width: 25%;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+}
+
+.container::-webkit-scrollbar {
+        display: none;
+}
+
+.container {
+        scrollbar-width: none;
 }
 
 .socials .container a {
@@ -81,12 +92,11 @@ main {
         color: var(--white);
 }
 
-.container a i {
-        padding: 0px 25px 0px 0px;
+.container span {
         width: 40px;
+        text-align: center;
+        padding-right: 1vw;
 }
-
-
 
 .content {
         width: 50%;
@@ -129,30 +139,44 @@ footer {
                 padding: 0vh 4vw 0vh 4vw;
         }
 
-        .artikel {
-                width: 100%;
-                display: flex;
-                justify-content: left;
-                padding: 0vh 4vw 1vh 4vw;
-        }
-
-        .container a {
-                padding: 3px 0px 3px 0px;
-        }
-
+        .artikel,
         .socials {
                 width: 100%;
                 display: flex;
-                justify-content: left;
+                flex-direction: column;
+                align-items: flex-start;
                 padding: 0vh 4vw 1vh 4vw;
+        }
+
+        .socials {
+                padding: 0vh 4vw 4vh 4vw;
+        }
+
+        .container {
+                display: flex;
+                overflow-x: auto;
+                width: 100%;
+                white-space: nowrap;
+        }
+
+        .container a {
+                padding: 3px 5vw 3px 0px;
+                display: inline-block;
+        }
+
+        .container span {
+                padding-right: 1.5vw;
         }
 }
 
-#slideshow-2022 img, #slideshow-2023 img, #slideshow-2023 video {
+#slideshow-2022 img,
+#slideshow-2023 img,
+#slideshow-2023 video {
         width: 75%;
 }
 
-#slideshow-2022, #slideshow-2023 {
+#slideshow-2022,
+#slideshow-2023 {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -170,4 +194,3 @@ footer {
         margin: 5px;
         border: none;
 }
-

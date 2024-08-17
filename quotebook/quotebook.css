@@ -17,10 +17,17 @@
         background-color: var(--oxford-blue);
 }
 
-.font-vivaldi {
+.font-vivaldi-header {
         font-family: "vivaldi-mn", sans-serif;
         font-weight: 400;
         font-style: normal;
+}
+
+.font-vivaldi-signature {
+        font-family: "vivaldi-mn", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 120%;
 }
 
 header {
@@ -31,8 +38,8 @@ header {
 }
 
 body {
-        margin: 0px;
-        font-size: 16px;
+        margin: 0;
+        font-size: 14pt;
 }
 
 main {
@@ -92,63 +99,55 @@ ul {
 }
 
 .mindset {
-        border-left: 9px solid var(--emerald);
+        border-left: 9px solid var(--champagne-gold);
 }
 
 .love {
-        border-left: 9px solid var(--amethyst);
+        border-left: 9px solid var(--champagne-gold);
 }
 
 .wisdom {
-        border-left: 9px solid var(--aqua);
+        border-left: 9px solid var(--champagne-gold);
 }
 
 .affirmation {
-        border-left: 9px solid var(--heliotrop);
+        border-left: 9px solid var(--champagne-gold);
 }
 
 .ponder {
-        border-left: 9px solid var(--black);
+        border-left: 9px solid var(--champagne-gold);
 }
 
 .filter-buttons {
         display: flex;
-        gap: 30px;
+        justify-content: space-evenly;
+        gap: 15px;
         padding-bottom: 50px;
+        width: 50%
 }
 
 button {
+        font-size: 10pt;
+        letter-spacing: 2px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--oxford-blue);
+        background: var(--floral-white);
         cursor: pointer;
-        color: white;
-        width: 90px;
-        background: none;
-        border: none;
-        padding: 5px 5px 5px 5px;
-        text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.5);
+        border: 3px solid var(--champagne-gold);
+        padding: 0.5em 0.5em;
+        box-shadow: 2px 2px 0px 0px var(--champagne-gold);
+        position: relative;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 170px;
 }
 
-button:nth-child(1) {
-        background: white;
-}
-
-button:nth-child(2) {
-        background-color: var(--emerald);
-}
-
-button:nth-child(3) {
-        background: var(--amethyst);
-}
-
-button:nth-child(4) {
-        background: var(--aqua);
-}
-
-button:nth-child(5) {
-        background: var(--heliotrop);
-}
-
-button:nth-child(6) {
-        background: var(--black) ;
+button:active {
+        box-shadow: 0px 0px 0px 0px;
+        top: 2px;
+        left: 2px;
 }
 
 .nav {
@@ -164,7 +163,8 @@ button:nth-child(6) {
         font-size: 16px;
 }
 
-.nav a:hover, .nav a.active {
+.nav a:hover,
+.nav a.active {
         background-color: var(--champagne-gold);
 }
 
@@ -210,11 +210,24 @@ footer {
                 display: flex;
                 justify-content: center;
                 width: 100vw;
-                gap: 5px;
                 padding: 20px 4vw 3ch 4vw;
         }
-        
+
         button {
-                font-size: 10px;
+                font-size: 6pt;
+                letter-spacing: 0px;
+                text-decoration: none;
+                text-transform: uppercase;
+                color: var(--oxford-blue);
+                background: var(--floral-white);
+                cursor: pointer;
+                border: 1px solid var(--champagne-gold);
+                padding: 0.5em 0.5em;
+                box-shadow: 1px 1px 0px 0px var(--champagne-gold);
+                position: relative;
+                user-select: none;
+                -webkit-user-select: none;
+                touch-action: manipulation;
+                width: 130px;
         }
 }
