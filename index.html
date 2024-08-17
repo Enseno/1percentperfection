@@ -148,8 +148,16 @@
                         var slideshow = document.getElementById(slideshowId);
                         if (!slideshow) return;
 
-                        var slides = slideshow.children;
+                        var slides = Array.from(slideshow.children).filter(child => child.tagName === 'IMG' || child.tagName === 'VIDEO');
                         var idx = 0;
+
+                        var prevButton = slideshow.querySelector('.prev-slide');
+                        var nextButton = slideshow.querySelector('.next-slide');
+
+                        function updateButtons() {
+                                prevButton.disabled = (idx === 0);
+                                nextButton.disabled = (idx === slides.length - 1);
+                        }
 
                         function showSlide(index) {
                                 slides[idx].style.display = 'none';
@@ -163,22 +171,28 @@
                                 if (slides[idx].tagName === 'VIDEO') {
                                         slides[idx].play();
                                 }
+
+                                updateButtons();
                         }
 
                         function nextSlide() {
-                                showSlide((idx + 1) % slides.length);
+                                if (idx < slides.length - 1) {
+                                        showSlide(idx + 1);
+                                }
                         }
 
                         function prevSlide() {
-                                showSlide((idx - 1 + slides.length) % slides.length);
+                                if (idx > 0) {
+                                        showSlide(idx - 1);
+                                }
                         }
 
-                        // Buttons mit spezifischem Slideshow-Id verknüpfen
-                        document.querySelector('#' + slideshowId + ' .next-slide').onclick = nextSlide;
-                        document.querySelector('#' + slideshowId + ' .prev-slide').onclick = prevSlide;
+                        prevButton.onclick = prevSlide;
+                        nextButton.onclick = nextSlide;
 
-                        // Zeige das erste Bild/Video an
+                        // Zeige das erste Bild/Video an und aktualisiere die Buttons
                         showSlide(0);
+                        updateButtons();
                 }
         </script>
 
