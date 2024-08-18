@@ -82,6 +82,15 @@ main {
         scrollbar-width: none;
 }
 
+.artikel .container {
+        display: flex;
+        justify-content: center;
+}
+
+#artikel-align {
+        width: 75%;
+}
+
 .socials .container a {
         text-decoration: none;
 }
@@ -187,6 +196,10 @@ footer {
                 align-items: flex-start;
                 padding: 0vh 4vw 1vh 4vw;
         }
+        
+        #artikel-align {
+                width: 100%;
+        }
 
         .socials {
                 padding: 0vh 4vw 4vh 4vw;
@@ -222,7 +235,7 @@ footer {
                 position: relative;
                 width: 70px;
         }
-        
+
         .prev-next button:active {
                 box-shadow: 0px 0px 0px 0px;
                 top: 2px;
