@@ -2,7 +2,7 @@
 
 * {
         box-sizing: border-box;
-        font-family: "proxima-nova", sans-serif;
+        font-family: Lato, sans-serif;
         font-weight: 300;
         font-style: normal;
 }
@@ -19,23 +19,16 @@
 }
 
 .font-vivaldi-header {
-        font-family: "proxima-nova", sans-serif;
+        font-family: "vivaldi-mn", sans-serif;
         font-weight: 300;
         font-style: normal;
-}
-
-.font-vivaldi-signature {
-        font-family: "vivaldi-mn", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 120%;
 }
 
 header {
         width: 100%;
         text-align: center;
         font-size: 1.5vw;
-        color: var(black);
+        color: var(--white);
 }
 
 body {
@@ -44,7 +37,7 @@ body {
 }
 
 .nav {
-        background-color: var(--seashell);
+        background-color: var(--anthrazit-inverted);
         display: flex;
         justify-content: center;
         margin: 0vh 0vh 1.5vh 0vh;
@@ -55,16 +48,18 @@ body {
         padding: 2vh 1.5vw 2vh 1.5vw;
         font-size: 16px;
         text-decoration: none;
+        font-weight: 400;
 }
 
 .nav a:hover,
 .nav a.active {
-        background-color: var(--white);
+        background-color: var(--anthrazit);
+        color: white;
 }
 
 main {
         display: flex;
-        color: black;
+        color: white;
         margin: 0% 0% 5% 0%;
 }
 
@@ -98,9 +93,10 @@ main {
 }
 
 .container a {
-        color: black;
+        color: white;
         padding: 10px 0px 10px 0px;
         display: flex;
+        text-decoration: none;
 }
 
 .container span {
@@ -131,15 +127,16 @@ footer {
 
 .prev-next button {
         font-size: 10pt;
+        font-weight: 400;
         letter-spacing: 2px;
         text-transform: uppercase;
-        color: var(--oxford-blue);
-        background: var(--floral-white);
+        color: var(black);
+        background: var(white);
         cursor: pointer;
-        border: 3px solid var(--champagne-gold);
+        border: 3px solid var(--anthrazit-inverted);
         padding: 0.5em 0.5em;
         margin: 1em;
-        box-shadow: 2px 2px 0px 0px var(--champagne-gold);
+        box-shadow: 2px 2px 0px 0px var(--anthrazit-inverted);
         position: relative;
         width: 170px;
 }
