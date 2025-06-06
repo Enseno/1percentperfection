@@ -3,7 +3,8 @@
 * {
         box-sizing: border-box;
         font-family: Lato, sans-serif;
-        text-decoration: none;
+        font-weight: 300;
+        font-style: normal;
 }
 
 .background {
@@ -14,27 +15,17 @@
         height: 100%;
         overflow: hidden;
         z-index: -1;
-        background-color: var(--oxford-blue);
+        background-color: var(--anthrazit);
 }
-
 .font-vivaldi-header {
         font-family: "vivaldi-mn", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-}
-
-.font-vivaldi-signature {
-        font-family: "vivaldi-mn", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 120%;
 }
 
 header {
         width: 100%;
         text-align: center;
         font-size: 1.5vw;
-        color: var(--floral-white);
+        color:white;
 }
 
 body {
@@ -43,27 +34,32 @@ body {
 }
 
 .nav {
-        background-color: var(--floral-white);
+        background-color: var(--anthrazit-inverted);
         display: flex;
         justify-content: center;
         margin: 0vh 0vh 1.5vh 0vh;
 }
 
 .nav a {
-        color: var(--oxford-blue);
+        color: black;
         padding: 2vh 1.5vw 2vh 1.5vw;
         font-size: 16px;
+        text-decoration: none;
+        font-weight: 400;
 }
 
-.nav a:hover, .nav a.active {
-        background-color: var(--champagne-gold);
+.nav a:hover,
+.nav a.active {
+        background-color: var(--anthrazit);
+        color: white;
 }
 
 main {
-        display: flex;
         color: white;
+        display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0px 0px 40px 0px;
 }
 
 .audio-container {

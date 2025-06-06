@@ -20,15 +20,13 @@
 
 .font-vivaldi-header {
         font-family: "vivaldi-mn", sans-serif;
-        font-weight: 300;
-        font-style: normal;
 }
 
 header {
         width: 100%;
         text-align: center;
         font-size: 1.5vw;
-        color: var(--white);
+        color: white;
 }
 
 body {

@@ -3,7 +3,8 @@
 * {
         box-sizing: border-box;
         font-family: Lato, sans-serif;
-        text-decoration: none;
+        font-weight: 300;
+        font-style: normal;
 }
 
 .background {
@@ -14,27 +15,18 @@
         height: 100%;
         overflow: hidden;
         z-index: -1;
-        background-color: var(--oxford-blue);
+        background-color: var(--anthrazit);
 }
 
 .font-vivaldi-header {
         font-family: "vivaldi-mn", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-}
-
-.font-vivaldi-signature {
-        font-family: "vivaldi-mn", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        font-size: 120%;
 }
 
 header {
         width: 100%;
         text-align: center;
         font-size: 1.5vw;
-        color: var(--floral-white);
+        color:white;
 }
 
 body {
@@ -59,7 +51,6 @@ main {
         margin: 15px 0px 15px 0px;
         text-align: justify;
         line-height: 1.6;
-
 }
 
 .quotes {
@@ -71,8 +62,8 @@ main {
 }
 
 .quote {
-        background-color: var(--floral-white);
-        color: var(--oxford-blue);
+        background-color: var(--white);
+        color: var(--black);
         width: 50%;
         margin: 0px;
         padding: 0px;
@@ -82,6 +73,7 @@ main {
         line-height: 1.6;
         padding: 10px 10px 10px 20px;
         margin: 0px;
+        font-weight: 300;
 }
 
 ul {
@@ -93,29 +85,29 @@ ul {
         text-align: right;
         font-style: italic;
         color: var(--oxford-blue);
-        font-size: x-small;
+        font-size: 65%;
         padding: 0px 5px 5px 0px;
         margin: 0;
 }
 
 .mindset {
-        border-left: 9px solid var(--champagne-gold);
+        border-left: 9px solid var(--anthrazit-inverted);
 }
 
 .love {
-        border-left: 9px solid var(--champagne-gold);
+        border-left: 9px solid var(--anthrazit-inverted);
 }
 
 .wisdom {
-        border-left: 9px solid var(--champagne-gold);
+        border-left: 9px solid var(--anthrazit-inverted);
 }
 
 .affirmation {
-        border-left: 9px solid var(--champagne-gold);
+        border-left: 9px solid var(--anthrazit-inverted);
 }
 
 .ponder {
-        border-left: 9px solid var(--champagne-gold);
+        border-left: 9px solid var(--anthrazit-inverted);
 }
 
 .filter-buttons {
@@ -128,15 +120,16 @@ ul {
 
 button {
         font-size: 10pt;
+        font-weight: 400;
         letter-spacing: 2px;
         text-decoration: none;
         text-transform: uppercase;
         color: var(--oxford-blue);
-        background: var(--floral-white);
+        background: var(--white);
         cursor: pointer;
-        border: 3px solid var(--champagne-gold);
+        border: 3px solid var(--anthrazit-inverted);
         padding: 0.5em 0.5em;
-        box-shadow: 2px 2px 0px 0px var(--champagne-gold);
+        box-shadow: 2px 2px 0px 0px var(--anthrazit-inverted);
         position: relative;
         user-select: none;
         -webkit-user-select: none;
@@ -151,21 +144,24 @@ button:active {
 }
 
 .nav {
-        background-color: var(--floral-white);
+        background-color: var(--anthrazit-inverted);
         display: flex;
         justify-content: center;
         margin: 0vh 0vh 1.5vh 0vh;
 }
 
 .nav a {
-        color: var(--oxford-blue);
+        color: black;
         padding: 2vh 1.5vw 2vh 1.5vw;
         font-size: 16px;
+        text-decoration: none;
+        font-weight: 400;
 }
 
 .nav a:hover,
 .nav a.active {
-        background-color: var(--champagne-gold);
+        background-color: var(--anthrazit);
+        color: white;
 }
 
 footer {
